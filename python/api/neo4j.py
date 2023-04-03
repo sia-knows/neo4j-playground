@@ -13,23 +13,8 @@ def init_driver(uri, username, password):
     return current_app.driver
 
 
-"""
-Get the instance of the Neo4j Driver created in the `initDriver` function
-"""
-# tag::getDriver[]
-
-
 def get_driver():
     return current_app.driver
-
-# end::getDriver[]
-
-
-"""
-If the driver has been instantiated, close it and all remaining open sessions
-"""
-
-# tag::closeDriver[]
 
 
 def close_driver():
@@ -38,4 +23,3 @@ def close_driver():
         current_app.driver = None
 
         return current_app.driver
-# end::closeDriver[]
